@@ -1,4 +1,4 @@
 # Work For NeXT CS
-### Name: YOUR NAME HERE
-### Class Period:
+### Name: Sebastian Acevedo 
+### Class Period: 4
 ---
