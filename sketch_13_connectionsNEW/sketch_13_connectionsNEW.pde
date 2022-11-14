@@ -7,19 +7,20 @@ void setup(){
   background(255);
   xvals = new int[100];
   yvals = new int[100];
-  numPoints = 50;
+  numPoints = 0;
 
-  makeLines(xvals, yvals, numPoints);
+  makeLines(xvals, yvals, 10);
   drawLines(xvals, yvals);
 }
 
 void makeLines(int[] xs, int[] ys, int points){
   if (points <= xs.length){
     if (points <= ys.length){
-  for (int i = 0; i < points; i++)
+  for (int i = 0; i < points; i++){
   xs[i] = int(random(width));
-  for (int i = 0; i < points; i++)
   ys[i] = int(random(height));
+  numPoints++;
+  }
     }
   }
 }
