@@ -1,9 +1,7 @@
 int[] xvals;
 int[] yvals;
-int MAX_POINTS = 0;
+int MAX_POINTS = 1000;
 int numPoints;
-int Dx;
-int Dy;
 
 void setup() {
   size(600, 400);
@@ -20,11 +18,10 @@ void draw(){
 
 
 void mousePressed(){
-  xvals = append(xvals, mouseX);
-  yvals = append(yvals, mouseY);
-  for (int i=0; i<xvals.length; i++)
-  println(xvals[i], yvals[i]);
-  numPoints++;
+    xvals[numPoints] = mouseX;
+    yvals[numPoints] = mouseY;
+    numPoints++;
+  
 }
 
 void drawLines(int[] xs, int[] ys) {
@@ -57,7 +54,7 @@ void keyPressed(){
     moveLines(xvals, yvals, 1, 0);
   }
   else if (key == 'c'){
-    //will modify :3
+    numPoints = 0;
   }
 
 }
