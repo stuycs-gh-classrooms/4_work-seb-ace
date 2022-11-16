@@ -18,11 +18,10 @@ void draw(){
 
 
 void mousePressed(){
-  for (int i=0; i < 1; i++){
-    xvals[i] = mouseX;
-    yvals[i] = mouseY;
+    xvals[numPoints] = mouseX;
+    yvals[numPoints] = mouseY;
     numPoints++;
-  }
+  
 }
 
 void drawLines(int[] xs, int[] ys) {
