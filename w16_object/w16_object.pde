@@ -25,12 +25,12 @@ void draw() {
 }//draw
 
 void keyPressed() {
-  if (key == ' ') {
+  if (key == 'r') {
     for (int i=0; i<balls.length; i++) {
     balls[i].reset();
     }
   }
-  else if (key == 'r'){
+  else if (key == ' '){
       for (int i=0; i<balls.length; i++) {
       balls[i].changeSpeed(int(random(5)), int(random(5)));
       }
